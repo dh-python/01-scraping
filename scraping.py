@@ -20,4 +20,7 @@ soup = BeautifulSoup(html, "html.parser")
 h3_list = soup.select(".entrylist-contents-title")
 for h3 in h3_list:
     title = h3.find("a").string
+    link = h3.find("a")["href"]
     print(title)
+    print(link)
+    print("------------")
