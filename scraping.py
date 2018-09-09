@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 with urlopen("http://b.hatena.ne.jp/hotentry/all") as response:
     html = response.read().decode("utf-8")
 
-# 03. スクレイピング（タイトルの取得）
+# 03. スクレイピング（タイトルとリンクの取得）
 soup = BeautifulSoup(html, "html.parser")
 
 h3_list = soup.select(".entrylist-contents-title")
